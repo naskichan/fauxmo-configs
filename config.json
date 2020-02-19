@@ -1,0 +1,33 @@
+{
+  "FAUXMO": {
+    "ip_address": "auto"
+  },
+  "PLUGINS": {
+    "CommandLinePlugin": {
+      "path": "/home/fauxmo/fauxmo-plugins/commandlineplugin.py",
+      "DEVICES": [
+        {
+            "name": "debNAS",
+            "port": 49915,
+            "on_cmd": "/home/fauxmo/debNAS.sh start",
+            "off_cmd": "/home/fauxmo/debNAS.sh stop",
+	    "state_cmd": "/home/fauxmo/debNAS.sh status"
+	},
+	{
+	    "name": "PC",
+	    "port": 49916,
+	    "on_cmd": "/home/fauxmo/pc.sh start",
+	    "off_cmd": "/home/fauxmo/pc.sh stop",
+	    "state_cmd": "/home/fauxmo/pc.sh status"
+        },
+	{
+	    "name": "Speedtest",
+	    "port": 49914,
+	    "on_cmd": "/home/fauxmo/speedtest_sender.sh start",
+	    "off_cmd": "/home/fauxmo/speedtest_sender.sh stop",
+	    "state_cmd": "/home/fauxmo/speedtest_sender.sh status"
+	}
+      ]
+    }
+  }
+}
